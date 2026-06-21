@@ -16,14 +16,14 @@ namespace ProductAPI.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
+        [HttpPost("AddProduct")]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
         {
             Guid id = await _mediator.Send(new CreateProductCommand(product));
             return Ok(id);
         }
 
-        [HttpGet]
+        [HttpGet("GetAllProduct")]
         public async Task<IActionResult> GetProducts()
         {
             var products = await _mediator.Send(new GetAllProductsQuery());

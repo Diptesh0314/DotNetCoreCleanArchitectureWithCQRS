@@ -76,10 +76,19 @@ http://localhost:5093
 ```bash
 dotnet run --project ProductAPI --launch-profile https
 ```
-Http profile will be available at
-http://localhost:7209
+Https profile will be available at
+https://localhost:7209
 
 For more details check `ProductAPI/Properties/launchSettings.json`
+
+### To hit the GET all products endpoint
+{{BaseUrl}}/api/Product/GetAllProduct
+e.g. http://localhost:5093/api/Product/GetAllProduct
+
+### To hit the POST a Product (add a product)
+{{BaseUrl}}/api/Product/AddProduct
+e.g. http://localhost:5093/api/Product/AddProduct 
+for POST request post it with json body for reference check **ProductAPI/ProductAPI.http** file
 
 ## Features
 

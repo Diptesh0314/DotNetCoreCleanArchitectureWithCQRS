@@ -2,8 +2,8 @@
 {
     public class ProductColor
     {
-        public string Code { get; set; }
-        public string Display { get; set; }
+        public string? Code { get; set; }
+        public string? Display { get; set; }
     }
 
     public class Product : IComparable<Product>
@@ -13,7 +13,7 @@
         public decimal Price { get; set; }
 
         public bool IsColorApply { get; set; }
-        public ProductColor ProductColor { get; set; }
+        public ProductColor? ProductColor { get; set; }
 
         public int MyProperty { get; set; }
 
